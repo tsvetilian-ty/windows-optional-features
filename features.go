@@ -1,14 +1,15 @@
-package main
+package feature
 
 import (
 	"errors"
 	"fmt"
-	"github.com/KnicKnic/go-powershell/pkg/powershell"
 	"strconv"
+
+	"github.com/KnicKnic/go-powershell/pkg/powershell"
 )
 
 type WindowsOptionalFeature struct {
-	Name string
+	Name   string
 	Status bool
 }
 
@@ -132,4 +133,3 @@ func SetOptionalFeatureStatus(feature WindowsOptionalFeature, restart bool) (boo
 
 	return true, nil
 }
-
